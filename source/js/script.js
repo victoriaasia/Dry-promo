@@ -1,6 +1,6 @@
 $(document).ready(function(){
   // slider1
-  $('.js-d-slider').slick({
+  $('.js-dp-slider').slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -8,13 +8,24 @@ $(document).ready(function(){
     arrows: false
   });
 
-  // tab1
+//slider1
 
-  $('.js-items li').click(function(){
+  $('.dp-middle-js-items li').click(function(){
+  var tab_id = $(this).attr('data-tab');
+
+  $('.dp-middle-js-items li').removeClass('current');
+  $('.dp-middle-js-content').removeClass('current');
+
+  $(this).addClass('current');
+  $("#"+tab_id).addClass('current');
+});
+
+  // tab1
+  $('.dp-js-items li').click(function(){
 	var tab_id = $(this).attr('data-tab');
 
-	$('.js-items li').removeClass('current');
-	$('.js-content').removeClass('current');
+	$('.dp-js-items li').removeClass('current');
+	$('.dp-js-content').removeClass('current');
 
 	$(this).addClass('current');
 	$("#"+tab_id).addClass('current');

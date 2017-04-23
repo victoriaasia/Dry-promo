@@ -4,14 +4,14 @@
 *
   box-sizing: border-box
   // letter-spacing: 0.04em
-.d-wrapper ::-moz-selection
+.dp-wrapper ::-moz-selection
   background: darken($orange, 10%)
   color: #fff
-.d-wrapper ::selection
+.dp-wrapper ::selection
   background: darken($orange, 10%)
   color: #fff
 
-.d-container
+.dp-container
   width: 980px
   margin: 0 auto
   position: relative
@@ -20,21 +20,21 @@
     width: 100%
     overflow-x: hidden
 
-.d-block
+.dp-block
   position: relative
   @include bp-table
     display: flex
     flex-direction: column
     align-items: center
     justify-content: flex-end
-.d-title
+.dp-title
   font-size: em(18)
   font-family: 'k-black'
   color: $orange
   text-transform: uppercase
   line-height: 1.389
   text-align: center
-.d-text
+.dp-text
   width: 100%
   font-size: em(16)
   font-family: 'k-reg'
@@ -55,10 +55,10 @@
     left:     -5px
   @include bp-table
     font-size: 4vw
-.d-or
+.dp-or
   color: $orange
 
-.d-info
+.dp-info
   height: 90px
   position: relative
   top: -32px
@@ -75,7 +75,7 @@
     left: 50px
     top: -25px
 
-.d-promo
+.dp-promo
   position: absolute
   color: #fff
   text-transform: uppercase
@@ -94,7 +94,7 @@
   &__hidden
     display: none
 
-.d-intro
+.dp-intro
   background: url('../assets/img/bg1.png') no-repeat
   background-size: contain
   height: 483px
@@ -119,7 +119,7 @@
     //   width: 100%
     //   float: none
     //   padding: 0 30px 0
-  .d-title
+  .dp-title
     background: url('../assets/img/title1.png') no-repeat
     background-size: contain
     background-position: center
@@ -128,7 +128,7 @@
     // @include bp-table
     //   width: 100%
     //   height: 35vw
-  .d-text
+  .dp-text
     color: #fff
     padding: 25px 15px 0 35px
     text-align: center
@@ -154,7 +154,7 @@
     //   height: 60px
 
 
-.d-second
+.dp-second
   background: url('../assets/img/bg2.png') no-repeat
   background-size: contain
   height: 380px
@@ -178,7 +178,7 @@
     //   width: 100%
     //   float: none
     //   padding: 0 30px 0
-  .d-title
+  .dp-title
     background: url('../assets/img/title2.png') no-repeat
     background-size: contain
     background-position: center
@@ -187,12 +187,12 @@
     // @include bp-table
     //   width: 100%
     //   height: 35vw
-  .d-text
+  .dp-text
     padding: 0 0 0 50px
     // @include bp-table
     //   padding: 0
 
-.d-third
+.dp-third
   background: url('../assets/img/bg3.png') no-repeat
   background-size: contain
   height: 380px
@@ -217,7 +217,7 @@
     //   width: 100%
     //   float: none
     //   padding: 0 30px 0
-  .d-title
+  .dp-title
     background: url('../assets/img/title3.png') no-repeat
     background-size: contain
     background-position: center
@@ -226,14 +226,14 @@
     // @include bp-table
     //   width: 100%
     //   height: 35vw
-  .d-text
+  .dp-text
     padding: 0 50px 0 0
     text-align: right
     // @include bp-table
     //   padding: 0
 
 
-.d-fourth
+.dp-fourth
   top: -32px
   // @include bp-table-portrait
   //   height: 100vh !important
@@ -256,13 +256,13 @@
     //   width: 100%
     //   float: none
     //   padding: 0 30px 0
-    .d-text
+    .dp-text
       padding: 0 150px
       text-align: center
       margin: 0
       // @include bp-table
       //   padding: 0
-  .d-title
+  .dp-title
     background: url('../assets/img/title4.png') no-repeat
     background-size: contain
     background-position: center
@@ -314,7 +314,7 @@
     height: 21px
     background: #fff
 
-.d-slider1
+.dp-slider1
   height: 100%
   &__item
     height: 100%
@@ -339,8 +339,98 @@
     &.-third
       background: url('../assets/img/slider1b.png') no-repeat
 
-.d-sixth
+.dp-fifth
   top: -32px
+  height: 500px
+  .dp-title
+    position: absolute
+    top: 33px
+    left: 50%
+    transform: translateX(-50%)
+    background: url('../assets/img/title5.png') no-repeat
+    background-size: contain
+    background-position: center
+    width: 280px
+    height: 85px
+    z-index: 99999
+
+.dp-middle
+  height: 100%
+  .dp-decor
+    position: absolute
+    width: 100px
+    height: 80px
+    bottom: 10px
+    right: 10px
+  &__items
+    display: flex
+    overflow: hidden
+    padding: 0
+    list-style: none
+    height: 50px
+    width: 50%
+    position: absolute
+    top: 150px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 99999
+    li
+      position: relative
+      padding: 16px 15px
+      width: 50%
+      height: 100%
+      cursor: pointer
+      @include transition(all 0.3s ease)
+      &:first-child
+        text-align: right
+      &:last-child
+        text-align: left
+    li.current
+      background: #fff
+  &__content
+    display: none
+  p
+    width: 85%
+    font-size: em(14)
+    font-family: 'k-reg'
+    line-height: 1.4
+    text-align: center
+  &__content.current
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+  &__slider
+    width: 100%
+    height: 500px
+  &__item
+    height: 100%
+    > div
+      height: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      padding-top: 130px
+      p
+        width: 75%
+        font-size: em(19)
+        font-family: 'k-reg'
+        color: #fff
+        line-height: 1.579
+        text-align: center
+    &.-first
+      background: url('../assets/img/slider-eu1.png') no-repeat
+    &.-second
+      background: url('../assets/img/slider-eu2.png') no-repeat
+    &.-third
+      background: url('../assets/img/slider-eu3.png') no-repeat
+    &.-fourth
+      background: url('../assets/img/slider-eu4.png') no-repeat
+
+
+.dp-sixth
+  top: -13px
   // @include bp-table-portrait
   //   height: 100vh !important
   // @include bp-table
@@ -361,7 +451,7 @@
     //   width: 100%
     //   float: none
     //   padding: 0 30px 0
-  .d-item
+  .dp-item
     padding: 10px
     flex: 1 1 50%
     max-width: 50%
@@ -412,11 +502,11 @@
       &::after
         background: url('../assets/img/5d.png')
 
-.d-seventh
-  top: -9px
+.dp-seventh
+  top: 10px
 
-.d-menu
-  height: 390px
+.dp-menu
+  height: 408px
   padding-bottom: 30px
   background: $lightGrey url('../assets/img/bg7.png') no-repeat
   background-position: 100% -180%
@@ -478,7 +568,7 @@
       justify-content: center
 
 
-.d-dry
+.dp-dry
   position: relative
   top: -9px
   &__intro
@@ -501,7 +591,7 @@
         width: 245px
         margin-right: 15px
     > div:last-child
-      .d-text
+      .dp-text
         text-align: center
         padding: 0px 100px
         margin: 0
@@ -524,13 +614,13 @@
   &__result
     height: 127px
     padding: 0 50px
-    .d-title
+    .dp-title
       text-align: left
-    .d-text
+    .dp-text
       margin: 0
       margin: -11px
 
-.d-sens
+.dp-sens
   position: relative
   &__content
     height: 285px
@@ -542,7 +632,7 @@
     float: left
     margin-top: 15px
     margin-right: 30px
-  .d-promo
+  .dp-promo
     bottom: -26px
     left: 0
     width: 204px
@@ -558,10 +648,10 @@
         font-size: em(21)
         font-weight: 700
     &:hover
-      .d-promo__hidden-txt
+      .dp-promo__hidden-txt
         display: block
 
-.d-foot
+.dp-foot
   position: relative
   margin-top: 50px
   &__content
@@ -571,7 +661,7 @@
     float: left
     margin-top: -15px
     margin-right: 15px
-  .d-promo
+  .dp-promo
     bottom: -5px
     right: 0
     font-size: em(12)
@@ -581,7 +671,7 @@
       span
         font-size: em(28)
 
-.d-footer
+.dp-footer
   padding: 30px 0 45px
   @include bp-table
     position: relative
@@ -598,7 +688,7 @@
     display: flex
     align-items: center
     justify-content: center
-.d-social-icon
+.dp-social-icon
   display: block
   background: url('../assets/img/socials.png') no-repeat
   border-radius: 50%
@@ -615,7 +705,7 @@
     width: 60px
     height: 60px
     background-size: 500px
-.d-vk
+.dp-vk
   background-position: -375px 0
   &:hover
     background-position: -440px 0
@@ -627,7 +717,7 @@
     background-position: -375px 0
     &:hover
       background-position: -440px 0
-.d-fb
+.dp-fb
   background-position: 0 0
   &:hover
     background-position: -62px 0
@@ -639,7 +729,7 @@
     background-position: 0 0
     &:hover
       background-position: -62px 0
-.d-tw
+.dp-tw
   background-position: -250px 0
   &:hover
     background-position: -312px 0
@@ -651,7 +741,7 @@
     background-position: -250px 0
     &:hover
       background-position: -312px 0
-.d-ok
+.dp-ok
   background-position: -125px 0
   &:hover
     background-position: -188px 0
