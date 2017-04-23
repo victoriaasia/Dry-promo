@@ -1,0 +1,662 @@
+@import 'colors'
+@import 'mixins'
+
+*
+  box-sizing: border-box
+  // letter-spacing: 0.04em
+.d-wrapper ::-moz-selection
+  background: darken($orange, 10%)
+  color: #fff
+.d-wrapper ::selection
+  background: darken($orange, 10%)
+  color: #fff
+
+.d-container
+  width: 980px
+  margin: 0 auto
+  position: relative
+  background: #fff
+  @include bp-table
+    width: 100%
+    overflow-x: hidden
+
+.d-block
+  position: relative
+  @include bp-table
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-end
+.d-title
+  font-size: em(18)
+  font-family: 'k-black'
+  color: $orange
+  text-transform: uppercase
+  line-height: 1.389
+  text-align: center
+.d-text
+  font-size: em(16)
+  font-family: 'k-reg'
+  line-height: 1.625
+  span
+    font-family: 'k-bold'
+  a
+    color: $orange
+    text-decoration: underline
+    font-family: 'k-bold'
+  ul
+    padding: 0
+    margin: 0
+    list-style: none
+  li::before
+    content:  "-"
+    position: relative
+    left:     -5px
+  @include bp-table
+    font-size: 4vw
+.d-or
+  color: $orange
+
+.d-info
+  height: 90px
+  position: relative
+  top: -32px
+  padding: 15px 180px
+  text-align: center
+  &-gr
+    background: $lightGrey
+    height: 89px
+    padding: 4px 180px
+  p
+    margin: 0
+  img
+    position: absolute
+    left: 50px
+    top: -25px
+
+.d-promo
+  position: absolute
+  color: #fff
+  text-transform: uppercase
+  line-height: 1.2
+  font-size: em(16)
+  font-family: Geometria, sans-serif
+  font-weight: 500
+  overflow: hidden
+  z-index: 999
+  &__content
+    background: $orange
+    white-space: nowrap
+    span
+      font-size: em(21)
+      font-weight: 700
+  &__hidden
+    display: none
+
+.d-intro
+  background: url('../assets/img/bg1.png') no-repeat
+  background-size: contain
+  height: 483px
+  z-index: 99
+  // @include bp-table-portrait
+  //   height: 100vh !important
+  // @include bp-table
+  //   background: url('../assets/img/bg1-mob.jpg') no-repeat
+  //   background-size: cover
+  //   background-position: top center
+  //   height: auto
+  //   padding-bottom: 30vw
+  //   padding-top: 30vw
+  &__content
+    width: 58%
+    float: left
+    padding: 40px 40px 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    // @include bp-table
+    //   width: 100%
+    //   float: none
+    //   padding: 0 30px 0
+  .d-title
+    background: url('../assets/img/title1.png') no-repeat
+    background-size: contain
+    background-position: center
+    width: 480px
+    height: 150px
+    // @include bp-table
+    //   width: 100%
+    //   height: 35vw
+  .d-text
+    color: #fff
+    padding: 25px 15px 0 35px
+    text-align: center
+    // @include bp-table
+    //   padding: 0
+  &__arrow
+    background: url('../assets/img/arrow.png') no-repeat
+    background-size: cover
+    position: absolute
+    bottom: 30px
+    left: 50%
+    transform: translateX(-50%)
+    width: 35px
+    height: 40px
+    animation: fly 2s infinite
+    animation-timing-function: linear
+    @include transition(all 1s ease)
+    // @include bp-table
+    //   left: 50%
+    //   transform: translateX(-50%)
+    //   bottom: 30px
+    //   width: 50px
+    //   height: 60px
+
+
+.d-second
+  background: url('../assets/img/bg2.png') no-repeat
+  background-size: contain
+  height: 380px
+  top: -32px
+  // @include bp-table-portrait
+  //   height: 100vh !important
+  // @include bp-table
+  //   background: url('../assets/img/bg1-mob.jpg') no-repeat
+  //   background-size: cover
+  //   background-position: top center
+  //   height: auto
+  //   padding-bottom: 30vw
+  //   padding-top: 30vw
+  &__content
+    width: 58%
+    float: left
+    padding: 40px 0 0
+    display: flex
+    flex-direction: column
+    // @include bp-table
+    //   width: 100%
+    //   float: none
+    //   padding: 0 30px 0
+  .d-title
+    background: url('../assets/img/title2.png') no-repeat
+    background-size: contain
+    background-position: center
+    width: 518px
+    height: 120px
+    // @include bp-table
+    //   width: 100%
+    //   height: 35vw
+  .d-text
+    padding: 0 0 0 50px
+    // @include bp-table
+    //   padding: 0
+
+.d-third
+  background: url('../assets/img/bg3.png') no-repeat
+  background-size: contain
+  height: 380px
+  top: -32px
+  // @include bp-table-portrait
+  //   height: 100vh !important
+  // @include bp-table
+  //   background: url('../assets/img/bg1-mob.jpg') no-repeat
+  //   background-size: cover
+  //   background-position: top center
+  //   height: auto
+  //   padding-bottom: 30vw
+  //   padding-top: 30vw
+  &__content
+    width: 58%
+    float: right
+    padding: 40px 0 0
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    // @include bp-table
+    //   width: 100%
+    //   float: none
+    //   padding: 0 30px 0
+  .d-title
+    background: url('../assets/img/title3.png') no-repeat
+    background-size: contain
+    background-position: center
+    width: 518px
+    height: 110px
+    // @include bp-table
+    //   width: 100%
+    //   height: 35vw
+  .d-text
+    padding: 0 50px 0 0
+    text-align: right
+    // @include bp-table
+    //   padding: 0
+
+
+.d-fourth
+  top: -32px
+  // @include bp-table-portrait
+  //   height: 100vh !important
+  // @include bp-table
+  //   background: url('../assets/img/bg1-mob.jpg') no-repeat
+  //   background-size: cover
+  //   background-position: top center
+  //   height: auto
+  //   padding-bottom: 30vw
+  //   padding-top: 30vw
+  &__content
+    height: 255px
+    padding: 20px 0 0
+    background: url('../assets/img/bg4.png') no-repeat
+    background-size: contain
+    display: flex
+    flex-direction: column
+    align-items: center
+    // @include bp-table
+    //   width: 100%
+    //   float: none
+    //   padding: 0 30px 0
+    .d-text
+      padding: 0 150px
+      text-align: center
+      margin: 0
+      // @include bp-table
+      //   padding: 0
+  .d-title
+    background: url('../assets/img/title4.png') no-repeat
+    background-size: contain
+    background-position: center
+    width: 300px
+    height: 100px
+    // @include bp-table
+    //   width: 100%
+    //   height: 35vw
+  &__slider
+    width: 100%
+    height: 377px
+  &__geo
+    height: 335px
+    padding: 20px 0 0
+    background: url('../assets/img/bg4a.png') no-repeat
+    background-size: contain
+    background-position: top right
+    p
+      width: 60%
+      padding: 10px 0 0 50px
+      &:first-child
+        width: 55%
+        padding: 7px 15px 15px 50px
+        color: #fff
+
+.slick-dots
+  position: absolute
+  bottom: 30px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 0
+  list-style: none
+  li
+    width: 18px
+    height: 18px
+    border-radius: 50%
+    background: rgba(#fff, 0.4)
+    margin: 0 7px
+  button
+    border: 0
+    outline: none
+    background: transparent
+    color: transparent
+    cursor: pointer
+  .slick-active
+    width: 21px
+    height: 21px
+    background: #fff
+
+.d-slider1
+  height: 100%
+  &__item
+    height: 100%
+    > div
+      height: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      p
+        width: 60%
+        font-size: em(19)
+        font-family: 'k-reg'
+        color: #fff
+        line-height: 1.579
+        text-align: center
+
+    &.-first
+      background: url('../assets/img/slider1.png') no-repeat
+    &.-second
+      background: url('../assets/img/slider1a.png') no-repeat
+    &.-third
+      background: url('../assets/img/slider1b.png') no-repeat
+
+.d-sixth
+  top: -32px
+  // @include bp-table-portrait
+  //   height: 100vh !important
+  // @include bp-table
+  //   background: url('../assets/img/bg1-mob.jpg') no-repeat
+  //   background-size: cover
+  //   background-position: top center
+  //   height: auto
+  //   padding-bottom: 30vw
+  //   padding-top: 30vw
+  &__content
+    background: url('../assets/img/bg5.jpg') no-repeat
+    background-size: cover
+    display: flex
+    flex-wrap: wrap
+    // flex-direction: column
+    // align-items: center
+    // @include bp-table
+    //   width: 100%
+    //   float: none
+    //   padding: 0 30px 0
+  .d-item
+    padding: 10px
+    flex: 1 1 50%
+    height: 250px
+    cursor: pointer
+    position: relative
+    @include transition(opacity 3s linear)
+    &__content
+      padding: 5px
+      max-width: 100%
+      height: 100%
+      border: 1px solid $darkGrey
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      p
+        width: 80%
+        margin: 0
+        font-size: 16px
+        font-family: 'k-reg'
+        line-height: 1.625
+        text-align: center
+
+    &:hover::after
+      opacity: 0
+    &::after
+      content: ''
+      top: 0
+      left: 0
+      position: absolute
+      z-index: 999
+      width: 100%
+      height: 250px
+      opacity: 1
+      @include transition(opacity 0.25s linear)
+    &.-first
+      &::after
+        background-image: url('../assets/img/5a.png')
+    &.-second
+      &::after
+        background: url('../assets/img/5b.png')
+    &.-third
+      &::after
+        background: url('../assets/img/5c.png')
+    &.-fourth
+      &::after
+        background: url('../assets/img/5d.png')
+
+.d-seventh
+  top: -9px
+
+.d-menu
+  height: 390px
+  padding-bottom: 30px
+  background: $lightGrey url('../assets/img/bg7.png') no-repeat
+  background-position: 100% -180%
+  &__items
+    display: flex
+    overflow: hidden
+    padding: 0
+    list-style: none
+    li
+      position: relative
+      padding: 10px 15px
+      width: 50%
+      height: 249px
+      background: #000
+      cursor: pointer
+      @include transition(all 0.3s ease)
+      &::before
+        content: ''
+        top: 0
+        left: 0
+        position: absolute
+        z-index: 999
+        width: 100%
+        height: 249px
+        opacity: 0.5
+    li.current
+    	background: #fff
+    li.current::after
+      content: ''
+      position: absolute
+      width: 0
+      height: 0
+      border-left: 50px solid transparent
+      border-right: 50px solid transparent
+      border-bottom: 50px solid $lightGrey
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      z-index: 999
+    li.current::before
+      opacity: 1
+    li:first-child::before
+      background: url('../assets/img/item7a.png') no-repeat
+      background-size: cover
+    li:last-child::before
+      background: url('../assets/img/item7b.png') no-repeat
+      background-size: cover
+  &__content
+  	display: none
+  p
+    width: 85%
+    font-size: em(16)
+    font-family: 'k-reg'
+    line-height: 1.625
+    text-align: center
+  &__content.current
+      display: flex
+      align-items: center
+      justify-content: center
+
+
+.d-dry
+  position: relative
+  top: -9px
+  &__intro
+    background: $darkGrey
+    color: #fff
+    position: relative
+    padding: 15px 180px
+    text-align: center
+    img
+      position: absolute
+      left: 20px
+      bottom: 0
+  &__about
+    height: 237px
+    > div:first-child
+      padding: 7px 50px
+      display: flex
+      align-items: center
+      img
+        width: 245px
+        margin-right: 15px
+    > div:last-child
+      .d-text
+        text-align: center
+        padding: 0px 100px
+        margin: 0
+  &__info
+    height: 185px
+    background: $orange
+    color: #fff
+    padding: 15px 130px
+    text-align: center
+  &__adv
+    height: 160px
+    padding: 10px 25px
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    div
+      flex: 1
+      text-align: center
+      padding: 0 10px
+  &__result
+    height: 127px
+    padding: 0 50px
+    .d-title
+      text-align: left
+    .d-text
+      margin: 0
+      margin: -11px
+
+.d-sens
+  position: relative
+  &__content
+    height: 285px
+    padding: 35px 50px 0 60px
+    background: url('../assets/img/sens-bg.png') no-repeat
+    background-size: cover
+    background-position: 0 -15px
+  img
+    float: left
+    margin-top: 15px
+    margin-right: 30px
+  .d-promo
+    bottom: -26px
+    left: 0
+    width: 204px
+    &__content
+      padding: 13px 28px 10px 20px
+      height: 69px
+      cursor: pointer
+    &__hidden-txt
+      background: $promo
+      width: 205px
+      padding: 10px 3px 10px 15px
+      span
+        font-size: em(21)
+        font-weight: 700
+    &:hover
+      .d-promo__hidden-txt
+        display: block
+
+.d-foot
+  position: relative
+  margin-top: 50px
+  &__content
+    height: 285px
+    padding: 0 50px 0 60px
+  img
+    float: left
+    margin-top: -15px
+    margin-right: 15px
+  .d-promo
+    bottom: -5px
+    right: 0
+    font-size: em(12)
+    &__content
+      padding: 17px 10px 10px 28px
+      height: 69px
+      span
+        font-size: em(28)
+
+.d-footer
+  padding: 30px 0 45px
+  @include bp-table
+    position: relative
+    top: -52px
+  &__title
+    font-size: em(16)
+    font-family: 'k-bold'
+    color: $darkGrey
+    text-transform: uppercase
+    text-align: center
+    @include bp-table
+      font-size: 4vw
+  &__social
+    display: flex
+    align-items: center
+    justify-content: center
+.d-social-icon
+  display: block
+  background: url('../assets/img/socials.png') no-repeat
+  border-radius: 50%
+  width: 60px
+  height: 60px
+  background-size: 500px
+  margin: 0 10px
+  @include bp-table
+    width: 80px
+    height: 80px
+    background-size: 660px
+    margin: 0 2vw
+  @include bp-max-480
+    width: 60px
+    height: 60px
+    background-size: 500px
+.d-vk
+  background-position: -375px 0
+  &:hover
+    background-position: -440px 0
+  @include bp-table
+    background-position: -494px 0
+    &:hover
+      background-position: -577px 0
+  @include bp-max-480
+    background-position: -375px 0
+    &:hover
+      background-position: -440px 0
+.d-fb
+  background-position: 0 0
+  &:hover
+    background-position: -62px 0
+  @include bp-table
+    background-position: 0 0
+    &:hover
+      background-position: -82px 0
+  @include bp-max-480
+    background-position: 0 0
+    &:hover
+      background-position: -62px 0
+.d-tw
+  background-position: -250px 0
+  &:hover
+    background-position: -312px 0
+  @include bp-table
+    background-position: -330px 0
+    &:hover
+      background-position: -412px 0
+  @include bp-max-480
+    background-position: -250px 0
+    &:hover
+      background-position: -312px 0
+.d-ok
+  background-position: -125px 0
+  &:hover
+    background-position: -188px 0
+  @include bp-table
+    background-position: -165px 0
+    &:hover
+      background-position: -248px 0
+  @include bp-max-480
+    background-position: -125px 0
+    &:hover
+      background-position: -188px 0
