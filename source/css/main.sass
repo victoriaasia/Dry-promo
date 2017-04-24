@@ -291,56 +291,24 @@
         padding: 7px 15px 15px 50px
         color: #fff
 
-.slick-dots
-  position: absolute
-  bottom: 30px
-  width: 100%
-  display: flex
-  align-items: center
-  justify-content: center
-  padding: 0
-  list-style: none
-  li
-    width: 18px
-    height: 18px
-    border-radius: 50%
-    background: rgba(#fff, 0.4)
-    margin: 0 7px
-  button
-    border: 0
-    outline: none
-    background: transparent
-    color: transparent
-    cursor: pointer
-  .slick-active
-    width: 21px
-    height: 21px
-    background: #fff
+.dp-slider
+  background: transparent url('../assets/img/slider1.jpg') repeat 0% 0%
+  p
+    font-size: em(19)
+    line-height: 1.579
+    width: 60%
 
-.dp-slider1
-  height: 100%
-  &__item
-    height: 100%
-    > div
-      height: 100%
-      display: flex
-      flex-direction: column
-      align-items: center
-      justify-content: center
-      p
-        width: 60%
-        font-size: em(19)
-        font-family: 'k-reg'
-        color: #fff
-        line-height: 1.579
-        text-align: center
+.dp-eu
+  background: transparent url('../assets/img/slider-eu.jpg') repeat 0% 0%
+.dp-rus
+  background: transparent url('../assets/img/slider-rus.jpg') repeat 0% 0%
 
-    &.-first
-      background: url('../assets/img/slider1.png') no-repeat
-    &.-second
-      background: url('../assets/img/slider1a.png') no-repeat
-    &.-third
-      background: url('../assets/img/slider1b.png') no-repeat
+.dp-middle-slider
+  p
+    width: 85%
+    font-size: em(19)
+    line-height: 1.4
+
 
 .dp-fifth
   top: -32px
@@ -359,6 +327,7 @@
 
 .dp-middle
   height: 100%
+  width: 100%
   .dp-decor
     position: absolute
     bottom: 10px
@@ -396,12 +365,6 @@
       background: #fff
   &__content
     display: none
-  p
-    width: 85%
-    font-size: em(14)
-    font-family: 'k-reg'
-    line-height: 1.4
-    text-align: center
   &__content.current
       display: block
       position: relative
@@ -410,7 +373,7 @@
     height: 500px
   &__item
     height: 100%
-    width: 980px !important
+    width: 100%
     > div
       height: 100%
       display: flex
@@ -418,29 +381,6 @@
       align-items: center
       justify-content: center
       padding-top: 130px
-      p
-        width: 75%
-        font-size: em(19)
-        font-family: 'k-reg'
-        color: #fff
-        line-height: 1.579
-        text-align: center
-
-.dp-eu
-  .-first
-    background: url('../assets/img/slider-eu1.png') no-repeat
-  .-second
-    background: url('../assets/img/slider-eu2.png') no-repeat
-  .-third
-    background: url('../assets/img/slider-eu3.png') no-repeat
-  .-fourth
-    background: url('../assets/img/slider-eu4.png') no-repeat
-
-.dp-rus
-  .-first
-    background: url('../assets/img/slider-rus1.png') no-repeat
-  .-second
-    background: url('../assets/img/slider-rus2.png') no-repeat
 
 
 .dp-sixth

@@ -51,7 +51,7 @@ gulp.task('img', function() {
 });
 
 gulp.task('js', function() {
-  gulp.src(['source/js/jquery.min.js', 'source/js/jquery-migrate.min.js', 'source/js/slick.min.js', 'source/js/script.js'])
+  gulp.src(['source/js/jquery.min.js', 'source/js/modernizr.js', 'source/js/jquery.cslider.js', 'source/js/script.js'])
     .pipe(concat('script.js'))
     .pipe(gulp.dest('dest/js'))
     .pipe(browserSync.reload({stream:true}))
