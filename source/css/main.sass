@@ -350,19 +350,26 @@
     left: 50%
     transform: translateX(-50%)
     z-index: 99999
-    li
-      position: relative
-      padding: 16px 15px
-      width: 50%
-      height: 100%
-      cursor: pointer
-      @include transition(all 0.3s ease)
-      &:first-child
-        text-align: right
-      &:last-child
-        text-align: left
-    li.current
-      background: #fff
+  &__link
+    position: relative
+    padding: 12px 15px
+    width: 50%
+    height: 100%
+    font-size: em(26)
+    line-height: 1
+    font-family: "k-black"
+    color: #fff
+    text-transform: uppercase
+    text-shadow: 3.316px 2.237px 0px rgba(21, 21, 21, 0.4)
+    cursor: pointer
+    @include transition(all 0.3s ease)
+    &:first-child
+      text-align: right
+    &:last-child
+      text-align: left
+  li.current
+    background: #fff
+    color: $darkGrey
   &__content
     display: none
   &__content.current
