@@ -45,7 +45,7 @@ gulp.task('sass', function() {
 
 gulp.task('img', function() {
   gulp.src(['source/assets/img/*.*', 'source/assets/img/mob/*.*'])
-    .pipe(image())
+    // .pipe(image())
     .pipe(gulp.dest('dest/assets/img'))
     .pipe(browserSync.reload({stream:true}))
 });
